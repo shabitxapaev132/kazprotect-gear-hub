@@ -1,20 +1,13 @@
 import { useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import { Award, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
-import { categories, products, type Category, type Product } from "@/data/catalog";
+import { categories, products, type Category } from "@/data/catalog";
 
 export const Catalog = () => {
   const [activeCategory, setActiveCategory] = useState<Category>("firefighter");
-  const [selected, setSelected] = useState<Product | null>(null);
 
   const filtered = useMemo(
     () => products.filter((p) => p.category === activeCategory),
@@ -58,7 +51,7 @@ export const Catalog = () => {
         <div key={activeCategory} className="grid animate-fade-up grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {filtered.map((p) => (
             <Card
-              key={p.title}
+              key={p.id}
               className="group flex flex-col overflow-hidden border-border bg-gradient-card transition-spring hover:-translate-y-1 hover:shadow-hover"
             >
               <div className="h-1 bg-gradient-gold" />
@@ -86,76 +79,18 @@ export const Catalog = () => {
                   </div>
                 )}
                 <Button
-                  onClick={() => setSelected(p)}
+                  asChild
                   className="mt-auto w-full bg-brand-navy text-primary-foreground transition-smooth hover:bg-brand-navy-deep group-hover:bg-gradient-gold group-hover:text-brand-navy-deep"
                 >
-                  Подробнее <ArrowRight className="ml-1 h-4 w-4" />
+                  <Link to={`/product/${p.id}`}>
+                    Подробнее <ArrowRight className="ml-1 h-4 w-4" />
+                  </Link>
                 </Button>
               </CardContent>
             </Card>
           ))}
         </div>
       </div>
-
-      <Dialog open={!!selected} onOpenChange={(o) => !o && setSelected(null)}>
-        <DialogContent className="max-h-[90vh] max-w-2xl overflow-y-auto">
-          {selected && (
-            <>
-              <DialogHeader className="text-left">
-                {selected.badge && (
-                  <Badge className="mb-2 w-fit border border-brand-gold/30 bg-brand-gold/10 font-semibold text-brand-gold hover:bg-brand-gold/15">
-                    {selected.badge}
-                  </Badge>
-                )}
-                <DialogTitle className="text-2xl font-extrabold text-brand-navy md:text-3xl">
-                  {selected.title}
-                </DialogTitle>
-                <DialogDescription className="text-base">
-                  {selected.description}
-                </DialogDescription>
-              </DialogHeader>
-
-              <div className="space-y-5 pt-3">
-                <div className="rounded-lg border border-border bg-muted/40 p-4">
-                  <div className="mb-1 text-xs font-bold uppercase tracking-wider text-brand-gold">
-                    Ткани и материалы
-                  </div>
-                  <p className="text-sm text-foreground">{selected.materials}</p>
-                </div>
-
-                {selected.gost && (
-                  <div className="flex items-start gap-3 rounded-lg border border-brand-gold/30 bg-brand-gold/5 p-4">
-                    <Award className="mt-0.5 h-5 w-5 shrink-0 text-brand-gold" />
-                    <div>
-                      <div className="text-xs font-bold uppercase tracking-wider text-brand-gold">
-                        Сертификация / ГОСТ
-                      </div>
-                      <p className="mt-1 text-sm font-medium text-foreground">{selected.gost}</p>
-                    </div>
-                  </div>
-                )}
-
-                <div className="rounded-lg border border-border bg-muted/40 p-4">
-                  <div className="mb-1 text-xs font-bold uppercase tracking-wider text-brand-gold">
-                    Преимущества
-                  </div>
-                  <p className="text-sm text-foreground">{selected.advantages}</p>
-                </div>
-
-                <Button
-                  asChild
-                  size="lg"
-                  className="w-full bg-gradient-gold text-brand-navy-deep shadow-gold hover:opacity-95"
-                >
-                  <a href="#contact" onClick={() => setSelected(null)}>
-                    Запросить стоимость
-                  </a>
-                </Button>
-              </div>
-            </>
-          )}
-        </DialogContent>
-      </Dialog>
     </section>
   );
 };
