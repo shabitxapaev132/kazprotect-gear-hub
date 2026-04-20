@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 export const SiteFooter = () => {
@@ -23,10 +24,10 @@ export const SiteFooter = () => {
             Навигация
           </h4>
           <ul className="space-y-2 text-sm">
-            <li><a href="#about" className="hover:text-brand-gold">О компании</a></li>
-            <li><a href="#production" className="hover:text-brand-gold">Производство</a></li>
-            <li><a href="#catalog" className="hover:text-brand-gold">Каталог</a></li>
-            <li><a href="#partners" className="hover:text-brand-gold">Партнёры</a></li>
+            <li><Link to="/" className="hover:text-brand-gold">Главная</Link></li>
+            <li><Link to="/catalog" className="hover:text-brand-gold">Каталог</Link></li>
+            <li><Link to="/about" className="hover:text-brand-gold">О компании</Link></li>
+            <li><Link to="/contacts" className="hover:text-brand-gold">Контакты</Link></li>
           </ul>
         </div>
 
