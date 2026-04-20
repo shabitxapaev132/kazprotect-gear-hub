@@ -38,10 +38,13 @@ export const Hero = () => {
             <span className="text-gradient-gold">мирового уровня</span>
           </h1>
 
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-brand-gold/90">
+            Профессионалу всегда важно быть в форме
+          </p>
           <p className="mb-10 max-w-2xl text-base text-primary-foreground/80 md:text-lg">
-            ТОО «KAZPROTECT» — ведущий казахстанский производитель спецодежды
-            и СИЗ. Используем материалы IBENA, Carrington, Concordia, Westex.
-            Сертификация ГОСТ K, ISO 9001 и европейские нормы EN.
+            ТОО «KAZPROTECT» — казахстанский производитель профессиональной
+            спецодежды и СИЗ полного цикла. Используем материалы IBENA, Carrington,
+            Concordia, Westex. Сертификация ГОСТ K, ISO 9001 и европейские нормы EN.
           </p>
 
           <div className="flex flex-wrap gap-4">
