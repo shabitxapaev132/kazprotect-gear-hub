@@ -45,8 +45,11 @@ export const Contact = () => {
                 <MapPin className="h-5 w-5" />
               </div>
               <div>
-                <div className="text-xs uppercase tracking-wider text-primary-foreground/60">Адрес</div>
-                <div className="font-semibold">Астана, Республика Казахстан</div>
+                <div className="text-xs uppercase tracking-wider text-primary-foreground/60">Производство и отдел продаж</div>
+                <div className="font-semibold">
+                  Республика Казахстан, Карагандинская обл.,<br />
+                  Осакаровский р-н, пос. Осакаровка, ул. А. Бокейханова, д. 67
+                </div>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -54,8 +57,8 @@ export const Contact = () => {
                 <Phone className="h-5 w-5" />
               </div>
               <div>
-                <div className="text-xs uppercase tracking-wider text-primary-foreground/60">Телефон</div>
-                <a href="tel:+77000000000" className="font-semibold hover:text-brand-gold">+7 (700) 000-00-00</a>
+                <div className="text-xs uppercase tracking-wider text-primary-foreground/60">Отдел продаж</div>
+                <a href="tel:+77017489895" className="font-semibold hover:text-brand-gold">+7 (701) 748-98-95</a>
               </div>
             </div>
             <div className="flex items-start gap-4">

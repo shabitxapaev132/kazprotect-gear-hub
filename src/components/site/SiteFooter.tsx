@@ -37,11 +37,11 @@ export const SiteFooter = () => {
           <ul className="space-y-3 text-sm">
             <li className="flex items-start gap-2">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold" />
-              <span>Астана, Республика Казахстан</span>
+              <span>Карагандинская обл., Осакаровский р-н,<br />пос. Осакаровка, ул. А. Бокейханова, 67</span>
             </li>
             <li className="flex items-start gap-2">
               <Phone className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold" />
-              <a href="tel:+77000000000" className="hover:text-brand-gold">+7 (700) 000-00-00</a>
+              <a href="tel:+77017489895" className="hover:text-brand-gold">+7 (701) 748-98-95</a>
             </li>
             <li className="flex items-start gap-2">
               <Mail className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold" />
@@ -54,7 +54,7 @@ export const SiteFooter = () => {
       <div className="border-t border-primary-foreground/10">
         <div className="container mx-auto flex flex-col items-center justify-between gap-2 px-4 py-6 text-xs text-primary-foreground/60 sm:flex-row">
           <span>© {new Date().getFullYear()} ТОО «KAZPROTECT». Все права защищены.</span>
-          <span>Астана · Казахстан · 12 лет на рынке</span>
+          <span>Карагандинская область · Казахстан · 12 лет на рынке</span>
         </div>
       </div>
     </footer>
