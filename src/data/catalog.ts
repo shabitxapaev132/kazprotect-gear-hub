@@ -35,6 +35,7 @@ export const categories: { id: Category; label: string }[] = [
 export const products: Product[] = [
   // 1. Боевая одежда пожарного
   {
+    id: "firefighter-euro-2",
     category: "firefighter",
     title: 'Костюм "Firefighter Euro-2"',
     badge: "2-й уровень защиты",
@@ -47,6 +48,7 @@ export const products: Product[] = [
       "Температурный диапазон от −40°C до +300°C. Устойчивость к потоку 40 кВт/м² более 10 сек. Специальные наколенники и налокотники для износостойкости.",
   },
   {
+    id: "firefighter-euro-1",
     category: "firefighter",
     title: 'Костюм "Firefighter Euro-1"',
     badge: "EN стандарт",
@@ -58,6 +60,7 @@ export const products: Product[] = [
       "Вес костюма не более 5 кг. Стойкость к контакту с нагретой поверхностью (400°C) не менее 7 сек.",
   },
   {
+    id: "tzozt-2-pyrovitex",
     category: "firefighter",
     title: "Костюм ТЗОЗТ ІІ (Пировитекс)",
     materials: "Огнестойкая ткань Пировитекс.",
@@ -67,6 +70,7 @@ export const products: Product[] = [
       "Высокая эргономика для активных спасательных работ, защита от климатических воздействий.",
   },
   {
+    id: "boots-strazak-01",
     category: "firefighter",
     title: "Сапоги пожарного STRAZAK ART. 01",
     badge: "Class 0 — до 1 кВ",
@@ -80,6 +84,7 @@ export const products: Product[] = [
 
   // 2. Защита от электродуги
   {
+    id: "ibena-arc-summer",
     category: "arc",
     title: "Костюм Ibena Arc (Лето)",
     badge: "Тип 6 · до 46 Cal/cm²",
@@ -90,6 +95,7 @@ export const products: Product[] = [
       "Высокая защита от электродуги при низком весе. Подходит для летнего сезона.",
   },
   {
+    id: "nomex-comfort-220",
     category: "arc",
     title: "Костюм Nomex Comfort 220 (Лето)",
     badge: "Тип 3 · до 27 Cal/cm²",
@@ -98,6 +104,7 @@ export const products: Product[] = [
     advantages: "Лёгкий вес при высоких защитных свойствах.",
   },
   {
+    id: "ibena-arc-winter",
     category: "arc",
     title: "Костюм Ibena Arc (Зима)",
     badge: "Тип 9 · до 120 кал/см²",
@@ -109,6 +116,7 @@ export const products: Product[] = [
       "Максимальная защита при использовании с термобельём (до 120 кал/см²).",
   },
   {
+    id: "thermoskin-underwear",
     category: "arc",
     title: "Комплект белья и подшлемники",
     materials: "Трикотаж Thermoskin Jersey, утеплитель Thinsulate CDS 70.",
@@ -119,6 +127,7 @@ export const products: Product[] = [
 
   // 3. Шахтерские
   {
+    id: "miner-base",
     category: "miner",
     title: "Костюм Шахтерский (Базовый)",
     materials: "Ткань Премьер-Cotton 350 / Strong 350.",
@@ -128,6 +137,7 @@ export const products: Product[] = [
     advantages: "Защита от мелкодисперсной пыли и воды. Высокая износостойкость.",
   },
   {
+    id: "miner-antistatic",
     category: "miner",
     title: "Костюм Шахтерский (Антистатик)",
     badge: "Антистатика",
@@ -141,6 +151,7 @@ export const products: Product[] = [
 
   // 4. ОПЗ Базовые
   {
+    id: "itr-summer",
     category: "base",
     title: "Костюм ИТР (Лето)",
     materials: "Ткани Мастер Коттон / Премьер-Comfort.",
@@ -151,6 +162,7 @@ export const products: Product[] = [
       "Повышенная износостойкость, вентиляционные отверстия в пройме, усиленные швы.",
   },
   {
+    id: "itr-winter",
     category: "base",
     title: "Костюм ИТР (Зима)",
     materials: "Смесовые ткани + утеплитель Термософт.",
@@ -163,6 +175,7 @@ export const products: Product[] = [
 
   // 5. Огнезащита + антистатика
   {
+    id: "triton-t-antistatic",
     category: "special",
     title: 'Костюм "Тритон-Т" (Антистатик)',
     badge: "Антистатика + сигнальные ленты",
@@ -173,6 +186,7 @@ export const products: Product[] = [
       "Защита от статики и механических повреждений. Высокая заметность на объекте.",
   },
   {
+    id: "rigchief-fr",
     category: "special",
     title: 'Костюм "RigChief" (Огнестойкая отделка)',
     badge: "Огнестойкая отделка",
@@ -184,6 +198,7 @@ export const products: Product[] = [
 
   // 6. Нефтяная
   {
+    id: "oil-suit",
     category: "oil",
     title: "Костюм Нефтяника (Лето / Зима)",
     badge: "50+ стирок",
@@ -198,6 +213,7 @@ export const products: Product[] = [
 
   // 7. Сварка / металлургия
   {
+    id: "preox-para-aramid",
     category: "welding",
     title: "Костюм усиленный (Preox / Para-Aramid)",
     badge: "LOI 45–50%",
@@ -206,6 +222,7 @@ export const products: Product[] = [
     advantages: "Стойкость к прожиганию более 50 секунд.",
   },
   {
+    id: "aramid-al",
     category: "welding",
     title: 'Плащ и шлем "Aramid Al"',
     badge: "До 20 кВт/м² · 90 сек",
@@ -218,6 +235,7 @@ export const products: Product[] = [
 
   // 8. Влагозащита
   {
+    id: "rainflex",
     category: "waterproof",
     title: "Плащ / Костюм Rainflex",
     badge: "До −20°C · сварные швы",
@@ -231,6 +249,7 @@ export const products: Product[] = [
 
   // 9. ТОК
   {
+    id: "tok-200-600",
     category: "heat",
     title: "Комплект ТОК-200/600",
     badge: "До 600°C",
@@ -242,3 +261,7 @@ export const products: Product[] = [
       "Работа при температурах до 600°C. Время защиты от пламени — до 20 секунд.",
   },
 ];
+
+export const getProductById = (id: string) => products.find((p) => p.id === id);
+export const getCategoryLabel = (id: Category) =>
+  categories.find((c) => c.id === id)?.label ?? "";
