@@ -10,6 +10,7 @@ export type Category =
   | "heat";
 
 export interface Product {
+  id: string;
   title: string;
   badge?: string;
   materials: string;
