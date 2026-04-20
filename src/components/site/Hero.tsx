@@ -29,7 +29,7 @@ export const Hero = () => {
         <div className="max-w-4xl animate-fade-up">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-brand-gold/40 bg-brand-gold/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand-gold backdrop-blur-sm">
             <ShieldCheck className="h-3.5 w-3.5" />
-            Полный цикл производства · Астана
+            Полный цикл производства · Карагандинская обл.
           </div>
 
           <h1 className="mb-6 font-extrabold leading-[1.05] text-primary-foreground text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
