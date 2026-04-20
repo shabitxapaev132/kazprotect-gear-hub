@@ -1,4 +1,5 @@
 import heroImage from "@/assets/hero-firefighter.jpg";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 
@@ -53,9 +54,9 @@ export const Hero = () => {
               size="lg"
               className="bg-gradient-gold text-brand-navy-deep shadow-gold transition-spring hover:scale-[1.02] hover:opacity-95"
             >
-              <a href="#catalog">
+              <Link to="/catalog">
                 Смотреть каталог <ArrowRight className="ml-1 h-4 w-4" />
-              </a>
+              </Link>
             </Button>
             <Button
               asChild
@@ -63,7 +64,7 @@ export const Hero = () => {
               variant="outline"
               className="border-primary-foreground/30 bg-primary-foreground/5 text-primary-foreground backdrop-blur-sm hover:bg-primary-foreground/10 hover:text-brand-gold"
             >
-              <a href="#contact">Запросить КП</a>
+              <Link to="/contacts">Запросить КП</Link>
             </Button>
           </div>
         </div>

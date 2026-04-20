@@ -50,7 +50,7 @@ const ProductPage = () => {
               variant="ghost"
               className="mb-6 -ml-3 text-primary-foreground/80 hover:bg-primary-foreground/10 hover:text-brand-gold"
             >
-              <Link to="/#catalog">
+              <Link to="/catalog">
                 <ArrowLeft className="mr-1 h-4 w-4" /> Назад в каталог
               </Link>
             </Button>
@@ -152,7 +152,7 @@ const ProductPage = () => {
                   Похожие позиции
                 </h2>
                 <Button asChild variant="ghost" className="text-brand-navy hover:text-brand-gold">
-                  <Link to="/#catalog">Весь каталог <ArrowRight className="ml-1 h-4 w-4" /></Link>
+                  <Link to="/catalog">Весь каталог <ArrowRight className="ml-1 h-4 w-4" /></Link>
                 </Button>
               </div>
               <div className="grid grid-cols-1 gap-6 md:grid-cols-3">

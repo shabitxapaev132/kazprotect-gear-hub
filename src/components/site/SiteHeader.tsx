@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Link, NavLink } from "react-router-dom";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -9,12 +9,10 @@ import {
 } from "@/components/ui/sheet";
 
 const links = [
-  { href: "#about", label: "О компании" },
-  { href: "#production", label: "Производство" },
-  { href: "#catalog", label: "Каталог" },
-  { href: "#industries", label: "Отрасли" },
-  { href: "#partners", label: "Партнёры" },
-  { href: "#contact", label: "Контакты" },
+  { to: "/", label: "Главная", end: true },
+  { to: "/catalog", label: "Каталог" },
+  { to: "/about", label: "О компании" },
+  { to: "/contacts", label: "Контакты" },
 ];
 
 export const SiteHeader = () => {
@@ -42,11 +40,22 @@ export const SiteHeader = () => {
           <span className="text-primary-foreground">PROTECT</span>
         </Link>
 
-        <nav className="hidden gap-8 text-sm font-medium text-primary-foreground/85 lg:flex">
+        <nav className="hidden gap-8 text-sm font-medium lg:flex">
           {links.map((l) => (
-            <a key={l.href} href={l.href} className="transition-smooth hover:text-brand-gold">
+            <NavLink
+              key={l.to}
+              to={l.to}
+              end={l.end}
+              className={({ isActive }) =>
+                `transition-smooth ${
+                  isActive
+                    ? "text-brand-gold"
+                    : "text-primary-foreground/85 hover:text-brand-gold"
+                }`
+              }
+            >
               {l.label}
-            </a>
+            </NavLink>
           ))}
         </nav>
 
@@ -55,7 +64,7 @@ export const SiteHeader = () => {
             asChild
             className="hidden bg-gradient-gold text-brand-navy-deep shadow-gold hover:opacity-90 sm:inline-flex"
           >
-            <a href="#contact">Оставить заявку</a>
+            <Link to="/contacts">Оставить заявку</Link>
           </Button>
 
           <Sheet open={open} onOpenChange={setOpen}>
@@ -67,21 +76,26 @@ export const SiteHeader = () => {
             <SheetContent side="right" className="w-72 border-l-brand-gold/30 bg-brand-navy-deep text-primary-foreground">
               <div className="mt-8 flex flex-col gap-4">
                 {links.map((l) => (
-                  <a
-                    key={l.href}
-                    href={l.href}
+                  <NavLink
+                    key={l.to}
+                    to={l.to}
+                    end={l.end}
                     onClick={() => setOpen(false)}
-                    className="border-b border-primary-foreground/10 py-3 text-lg font-medium transition-smooth hover:text-brand-gold"
+                    className={({ isActive }) =>
+                      `border-b border-primary-foreground/10 py-3 text-lg font-medium transition-smooth ${
+                        isActive ? "text-brand-gold" : "hover:text-brand-gold"
+                      }`
+                    }
                   >
                     {l.label}
-                  </a>
+                  </NavLink>
                 ))}
                 <Button
                   asChild
                   className="mt-4 bg-gradient-gold text-brand-navy-deep shadow-gold"
                   onClick={() => setOpen(false)}
                 >
-                  <a href="#contact">Оставить заявку</a>
+                  <Link to="/contacts">Оставить заявку</Link>
                 </Button>
               </div>
             </SheetContent>
